@@ -3,6 +3,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
+
+import Chatbot from '../components/Chatbot';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,6 +34,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Chatbot />
             <Toaster />
           </ThemeProvider>
         </body>
